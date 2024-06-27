@@ -1,12 +1,12 @@
 const PRG = {
-    VERSION: "1.04.01",
+    VERSION: "1.04.02",
     NAME: "Princess Wants Everything",
     INIT: function () {
         //console.clear();
-        console.log(PRG.NAME + " " + PRG.VERSION + " by Lovro Selic, (c) C00lSch00l 2016");
+        console.log(PRG.NAME + " " + PRG.VERSION + " by Lovro Selic, (c) C00lSch00l/LaughingSkull 2016");
         $("#title").html(PRG.NAME);
         $(".prg_name").html(PRG.NAME);
-        $("#version").html(PRG.NAME + " V" + PRG.VERSION + " by Lovro Selič <span style='font-size:14px'>&copy</span> C00lSch00l 2016");
+        $("#version").html(PRG.NAME + " V" + PRG.VERSION + " by Lovro Selič <span style='font-size:14px'>&copy</span> C00lSch00l/LaughingSkull 2016");
         $("input#toggleAbout").val("About " + PRG.NAME);
         $("#about fieldset legend").append(" " + PRG.NAME + " ");
         Command.count = 0;
@@ -28,8 +28,7 @@ INI.STDH = 72;
 INI.DOORW = 48;
 INI.DOORH = 48;
 INI.DOORC = 12;
-INI.SOURCE = "http://www.c00lsch00l.eu/Games/AA/";
-//INI.SOURCE = "/Games/AA/";
+INI.SOURCE = "Assets/Graphics/Legacy/";
 INI.NBS = "&nbsp";
 INI.WOODPATTERN = 100;
 INI.GRIDPX = 50;
