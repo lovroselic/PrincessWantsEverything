@@ -1,12 +1,12 @@
 const PRG = {
-    VERSION: "1.04.02",
+    VERSION: "1.04.03",
     NAME: "Princess Wants Everything",
     INIT: function () {
         //console.clear();
         console.log(PRG.NAME + " " + PRG.VERSION + " by Lovro Selic, (c) C00lSch00l/LaughingSkull 2016");
         $("#title").html(PRG.NAME);
         $(".prg_name").html(PRG.NAME);
-        $("#version").html(PRG.NAME + " V" + PRG.VERSION + " by Lovro Selič <span style='font-size:14px'>&copy</span> C00lSch00l/LaughingSkull 2016");
+        $("#version").html(PRG.NAME + " V" + PRG.VERSION + " by Lovro Selič <span style='font-size:14px'>&copy</span> .0Sch00l/LaughingSkull 2016");
         $("input#toggleAbout").val("About " + PRG.NAME);
         $("#about fieldset legend").append(" " + PRG.NAME + " ");
         Command.count = 0;
