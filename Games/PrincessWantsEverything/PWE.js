@@ -1,12 +1,18 @@
+console.clear();
+/*jshint browser: true */
+/*jshint -W097 */
+/*jshint -W117 */
+/*jshint -W061 */
+"use strict";
+
 const PRG = {
-    VERSION: "1.04.03",
+    VERSION: "1.05",
     NAME: "Princess Wants Everything",
     INIT: function () {
-        //console.clear();
         console.log(PRG.NAME + " " + PRG.VERSION + " by Lovro Selic, (c) C00lSch00l/LaughingSkull 2016");
         $("#title").html(PRG.NAME);
         $(".prg_name").html(PRG.NAME);
-        $("#version").html(PRG.NAME + " V" + PRG.VERSION + " by Lovro Selič <span style='font-size:14px'>&copy</span> .0Sch00l/LaughingSkull 2016");
+        $("#version").html(PRG.NAME + " V" + PRG.VERSION + " by Lovro Selič <span style='font-size:14px'>&copy</span> C00Sch00l/LaughingSkull 2016");
         $("input#toggleAbout").val("About " + PRG.NAME);
         $("#about fieldset legend").append(" " + PRG.NAME + " ");
         Command.count = 0;
@@ -28,7 +34,7 @@ INI.STDH = 72;
 INI.DOORW = 48;
 INI.DOORH = 48;
 INI.DOORC = 12;
-INI.SOURCE = "Assets/Graphics/Legacy/";
+INI.SOURCE = "/Assets/Graphics/Legacy/";
 INI.NBS = "&nbsp";
 INI.WOODPATTERN = 100;
 INI.GRIDPX = 50;
@@ -77,7 +83,7 @@ Array.prototype.swap = function (x, y) {
 };
 Array.prototype.shuffle = function () {
     var i = this.length,
-            j;
+        j;
     while (--i > 0) {
         j = rnd(0, i);
         this.swap(i, j);
@@ -504,7 +510,7 @@ var Command = {
         var ErrorMessages = ["This is not valid command.", "You want what?", "Try making sense.", "I don't understand you.", "Just typing rubbish or what?", "Hmm?", "What do you want?", "This makes no sense.", "Please try again, I don' understand.", "What??"];
         print(ErrorMessages.chooseRandom());
     },
-    new : function () {
+    new: function () {
         if (Engine.alertMode === false) {
             input();
         }
@@ -564,7 +570,7 @@ var Command = {
             if (inv && inv.length) {
                 var LN = inv.length;
                 var txt = "";
-                for (var i = 0; i < LN; ) {
+                for (var i = 0; i < LN;) {
                     txt += inv[i];
                     i++;
                     if (i < LN - 1) {
@@ -718,7 +724,7 @@ var Command = {
             var LN = COOLIE.inventory.length;
             if (LN) {
                 var txt = "Coolie carries: ";
-                for (var i = 0; i < LN; ) {
+                for (var i = 0; i < LN;) {
                     txt += COOLIE.inventory[i].name;
                     i++;
                     if (i < LN) {
